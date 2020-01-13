@@ -15,19 +15,25 @@ You have to put all images in “images” folder because all images are taken u
 ## EDGE DETECTION
 >OpenCv library is used to read image as grayscale (intensity values of the pixels are 8 bit and range from 0 to 255). After reading image, 5 x 5 gauss filter was used to eliminate noise in the image.
 
-![Gauss kernel](/output/gauss.JPG)
+<p align="center">
+	![Gauss kernel](/output/gauss.JPG)
+</p>
 
 > After noise reduction, gradients determined by using Sobel filter. Then magnitude and angle of the gradient are calculated.
 
-![Sobel kernel](/output/sobel.JPG)
+<p align="center">
+	![Sobel kernel](/output/sobel.JPG)
+</p>
 
 > The following chart is used for non-maximum supression. The pixel value compared with neighboring pixels corresponding to the angle value. If the displayed pixel is larger than the neigboring pixels, the value is retained, otherwise the value is 0.
 
-![Chart](/output/chart.png)
+<p align="center">
+	<img src="/output/chart.png" alt="Chart" width="300" height="300">
+</p>
 
 >Thresholding is used to identify the weak and strong edge. If pixel value is greater than high threshold, the edge is defined as strong. If pixel value is less than low threshold, the pixel value is 0. If the pixel value is between two threshold values, hysteresis method is applied.
 
 > Hysteresis method is used to determine whether to erase weak edges. Whether or not the weak pixels are deleted is determined by looking at the surrounding pixels. If there is a strong edge at neigbours, the weak edge is defined as the strong edge, otherwise the pixel value is 0.
 
 ### OUTPUTS ###
-![Click to see results.](/images)
+[Click to see results.](/images)

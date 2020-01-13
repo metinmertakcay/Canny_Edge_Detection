@@ -16,13 +16,13 @@ You have to put all images in “images” folder because all images are taken u
 >OpenCv library is used to read image as grayscale (intensity values of the pixels are 8 bit and range from 0 to 255). After reading image, 5 x 5 gauss filter was used to eliminate noise in the image.
 
 <p align="center">
-	![Gauss kernel](/output/gauss.JPG)
+	<img src="/output/gauss.JPG" alt="Gauss kernel" width="400" height="120">
 </p>
 
 > After noise reduction, gradients determined by using Sobel filter. Then magnitude and angle of the gradient are calculated.
 
 <p align="center">
-	![Sobel kernel](/output/sobel.JPG)
+	<img src="/output/sobel.JPG" alt="Sobel" width="400" height="80">
 </p>
 
 > The following chart is used for non-maximum supression. The pixel value compared with neighboring pixels corresponding to the angle value. If the displayed pixel is larger than the neigboring pixels, the value is retained, otherwise the value is 0.
